@@ -16,11 +16,9 @@ An Xposed module bringing system-level Sony headphone control to Xiaomi HyperOS.
 The protocol layer is based on OpenBuds' clean-room Sony Tandem implementation
 (BLE GATT + SPP).
 
-### Supported models (first batch)
+### Supported models 
 
-- Sony WH-1000XM4
-- Sony LinkBuds S
-- Sony WF-1000XM5
+Theoretically supports all released Sony headphones
 
 ### Headphone features
 
