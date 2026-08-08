@@ -27,6 +27,7 @@ Theoretically supports all released Sony headphones
 - **Battery** — TWS left / right / case, single level for headbands
 - **Playback** — previous / play-pause / next
 - **Status** — LE Audio, Quick Access, wearing detection, firmware version
+- **Headphone power off** — sends Sony USER_POWER_OFF on supported models
 - **Tandem debug** — TX/RX log viewer and raw HEX sender
 
 ### HyperOS integration
@@ -36,12 +37,13 @@ Theoretically supports all released Sony headphones
 - **Focus Island / notifications** — connect & battery island, AOD battery, ANC-cycle notification button
 - **Fusion device center** — battery and ANC state read/write
 - **Quick popup** — control popup from the notification
-- **Model images** — cloud catalog matched by model + color, custom images supported
+- **Model images** — automatically matched from the Sound Connect model/colour catalog, without custom image configuration
 
 ### Usage
 
 1. Install the APK, enable the module in LSPosed with scopes:
-   `com.android.bluetooth`, `com.milink.service`, `com.xiaomi.bluetooth`, `com.android.settings`
+   `com.android.bluetooth`, `com.milink.service`, `com.xiaomi.bluetooth`, `com.android.settings`, `com.sony.songpal.mdr`
+   (`com.sony.songpal.mdr` is the official Sony Sound Connect package; it lets SonyPods hand over the headphone connection while the official UI, keep-connection service, or control session is active, then restores it after the official session ends.)
 2. Restart the scopes (one-tap root restart inside the app)
 3. Open the app, grant Bluetooth / notification permissions, connect your Sony headphones
 

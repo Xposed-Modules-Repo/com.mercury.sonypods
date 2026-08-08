@@ -24,6 +24,7 @@ OpenBuds 的 Sony Tandem（BLE GATT + SPP）净室实现。
 - **降噪控制** — 关闭 / 降噪 / 环境声三态切换，环境声等级（1–20）与人声模式
 - **均衡器** — 官方预设 + Clear Bass + 自定义频段
 - **电量显示** — TWS 左 / 右 / 充电盒，头戴式单电量
+- **耳机关机** — 对支持 Sony USER_POWER_OFF 的型号发送关机命令
 - **播放控制** — 上一首 / 播放暂停 / 下一首
 - **状态读取** — LE Audio、Quick Access、佩戴检测、固件版本
 - **Tandem 调试** — 查看 TX/RX 日志、发送原始 HEX 消息
@@ -35,12 +36,13 @@ OpenBuds 的 Sony Tandem（BLE GATT + SPP）净室实现。
 - **超级岛 / 焦点通知** — 连接与电量岛、AOD 息屏电量、通知栏降噪循环按钮
 - **融合设备中心** — 电量与降噪状态读写
 - **快捷弹窗** — 点击通知弹出控制浮窗
-- **型号图片** — 云端型号图目录按型号+颜色自动匹配，支持自定义图片
+- **型号图片** — 按 Sound Connect 型号与颜色目录自动匹配，不提供自定义图片入口
 
 ### 使用
 
 1. 安装 APK，在 LSPosed 中启用模块，勾选作用域：
-   `com.android.bluetooth`、`com.milink.service`、`com.xiaomi.bluetooth`、`com.android.settings`
+   `com.android.bluetooth`、`com.milink.service`、`com.xiaomi.bluetooth`、`com.android.settings`、`com.sony.songpal.mdr`
+   （`com.sony.songpal.mdr` 为 Sony Sound Connect 官方包名，用于在官方 App 的界面、后台保活服务或控制会话活跃时让出耳机连接，并在官方控制会话结束后自动恢复。）
 2. 重启作用域（App 内可一键 root 重启）
 3. 打开 App 授予蓝牙 / 通知权限，连接 Sony 耳机
 
